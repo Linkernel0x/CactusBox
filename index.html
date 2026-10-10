@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌵CactusBox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="left-side">
+        <div class="card">
+            <section class="library">
+                <h3>Library</h3>
+                <ul id="library-list"></ul>
+            </section>
+
+            <section class="add-track-section">
+                <h3>➕ Add a song</h3>
+                <form id="add-form">
+                    <input type="text" id="track-title" placeholder="Title" required>
+                    <input type="text" id="track-author" placeholder="V.A.">
+                    <input type="url" id="track-url" placeholder="File URL (.mp3, .wav)" required>
+                    <button class="primary" type="submit">Add to library</button>
+                </form>
+            </section>
+        </div>
+    </aside>
+
+    <aside class="right-side">
+        <div class="card">
+            <section class="queue-section">
+                <h3>Queue</h3>
+                <ul id="queue-list" class="queue-list"></ul>
+            </section>
+
+            <section class="playlists">
+                <h3>Playlists</h3>
+                <ul id="playlists" class="class-list"></ul>
+            </section>
+        </div>
+    </aside>
+
+    <main class="jukebox-card">
+        <header class="header">
+            <h1>🌵 CactusBox</h1>
+            <p class="subtitle">A Silly Jukebox</p>
+        </header>
+
+        <section class="now-playing-box">
+            <span class="status-badge">Now playing...</span>
+            <h2 id="current-title">No song is playing</h2>
+            <audio id="audio-player"></audio>
+        </section>
+
+        <section class="controls">
+            <div class="button-group">
+                <button class="secondary" id="previous-btn"><i class="fa-solid fa-backward-fast"></i></button>
+                <button class="primary" id="play-btn"><i class="fa-solid fa-play"></i></button>
+                <button class="secondary" id="stop-btn"><i class="fa-solid fa-stop"></i></button>
+                <button class="secondary" id="skip-btn"><i class="fa-solid fa-forward-fast"></i></button>
+            </div>
+            <div class="button-group">
+                <button class="secondary" id="repeat-btn"><i class="fa-solid fa-repeat"></i></button>
+                <button class="secondary" id="repeat1-btn"><i class="fa-solid fa-repeat"><span style="padding-left: 4px">1</span></i></button>
+                <button class="secondary" id="shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
+            </div>
+            <div class="button-group">
+                <button class="secondary" id="timer-btn"><i class="fa-solid fa-stopwatch"></i></button>
+                <button class="secondary" id="timer-end-btn"><i class="fa-solid fa-stopwatch"></i><i class="fa-solid fa-stop"></i></button>
+                <button class="secondary" id="timer-2-btn"><i class="fa-solid fa-stopwatch"><span style="padding-left: 4px">2</span></i></button>
+                <button class="secondary" id="timer-10-btn"><i class="fa-solid fa-stopwatch"><span style="padding-left: 4px">10</span></i></button>
+                <button class="secondary" id="timer-20-btn"><i class="fa-solid fa-stopwatch"><span style="padding-left: 4px">20</span></i></button>
+                <button class="secondary" id="timer-60-btn"><i class="fa-solid fa-stopwatch"><span style="padding-left: 4px">60</span></i></button>
+
+            </div>
+
+            <div class="volume-container">
+                <label for="volume">Volume</label>
+                <input class="range" type="range" id="volume" min="0" max="1" step="0.05" value="0.8">
+            </div>
+        </section>
+    </main>
+
+    <script src="class.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
